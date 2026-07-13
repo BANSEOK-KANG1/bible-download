@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-config="appName">성경 앱 설치</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="senior-install" data-page="download">
+    <main class="page page--install">
+      <section class="hero hero--compact">
+        <div class="app-icon" aria-hidden="true">성</div>
+        <h1 data-config="appName">성경 앱</h1>
+        <p>차례대로 따라 하시면 됩니다</p>
+      </section>
+
+      <div class="wizard-progress" aria-label="설치 진행">
+        <div class="wizard-progress__bar">
+          <div id="progress-fill" class="wizard-progress__fill"></div>
+        </div>
+        <div id="progress-dots" class="wizard-progress__dots"></div>
+        <p id="progress-label" class="wizard-progress__label">1 / 4</p>
+      </div>
+
+      <section id="wizard-step" class="wizard-card" aria-live="polite">
+        <div class="wizard-card__badge" id="step-badge">1</div>
+        <h2 id="step-title" class="wizard-card__title">설치 파일을 받아요</h2>
+        <p id="step-body" class="wizard-card__body">
+          아래 큰 버튼을 한 번만 눌러 주세요.
+        </p>
+        <p id="step-meta" class="wizard-card__meta">
+          약 <span data-config="apkSizeMb">130</span>MB · 와이파이 권장
+        </p>
+      </section>
+
+      <div class="wizard-actions">
+        <button id="wizard-primary-btn" class="btn btn-primary btn--large" type="button">
+          받기
+        </button>
+        <div class="wizard-actions__nav">
+          <button id="wizard-prev-btn" class="btn btn-secondary btn--nav" type="button" hidden>
+            이전
+          </button>
+          <button id="wizard-next-btn" class="btn btn-secondary btn--nav" type="button" hidden>
+            다음
+          </button>
+        </div>
+      </div>
+
+      <p class="help-text" data-config="helpText">
+        어려우시면 가족에게 화면을 보여주세요.
+      </p>
+      <a
+        id="support-link"
+        class="support-link-after-install"
+        href="index.html#support"
+        hidden
+        data-config="postInstallSupportLabel"
+      >
+        응원하고 싶으시면 (선택)
+      </a>
+      <a id="help-phone" class="help-phone" href="#" hidden></a>
+    </main>
+
+    <a id="hidden-download" class="visually-hidden" download hidden></a>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

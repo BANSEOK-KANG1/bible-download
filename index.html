@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-config="appName">성경 앱</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="entry">
+    <main class="page">
+      <section class="hero">
+        <div class="app-icon" aria-hidden="true">성</div>
+        <h1 data-config="appName">성경 앱</h1>
+        <p data-config="appDescription">
+          여러 번역본을 함께 읽을 수 있는 성경 앱
+        </p>
+      </section>
+    </main>
+
+    <div
+      id="donation-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal__panel">
+        <h2 id="modal-title" class="modal__title" data-config="modalTitle">
+          앱 설치 안내
+        </h2>
+        <p class="modal__desc" data-config="modalIntro">
+          무료로 이용하실 수 있습니다. 아래 버튼을 누르면 차례대로 설치를
+          도와드려요.
+        </p>
+
+        <p class="story-text story-text--short" data-config="entryStoryText">
+          이 앱은 혼자, 더 많은 분이 말씀을 가까이 읽으시길 바라는 마음으로
+          만들고 있습니다.
+        </p>
+
+        <div class="modal__actions modal__actions--primary">
+          <button id="donate-done-btn" class="btn btn-primary" type="button">
+            설치 시작하기
+          </button>
+        </div>
+
+        <section id="support" class="support-section">
+          <p class="support-section__label" data-config="supportSummary">
+            개발 응원하기 (선택 사항)
+          </p>
+          <p class="support-section__desc" data-config="storyText">
+            후원은 전혀 필수가 아니에요. 그래도 보내주시는 작은 응원 하나가 버그를
+            고치고, 새 번역을 더하는 힘이 됩니다. 여러분의 마음이 정말 큰 힘이에요.
+          </p>
+
+          <div class="amount-section">
+            <div id="amount-options" class="amount-options"></div>
+          </div>
+
+          <div class="bank-info bank-info--compact">
+            <span data-config="bankName">카카오뱅크</span>
+            <span data-config="accountHolder">강반석</span>
+            <span data-config="accountNumber">3333-08-396-3527</span>
+          </div>
+
+          <div class="pay-actions">
+            <button id="toss-send-btn" class="btn btn-pay btn-pay--toss" type="button">
+              토스
+            </button>
+            <button id="kakao-send-btn" class="btn btn-pay btn-pay--kakao" type="button">
+              카카오페이
+            </button>
+            <button id="copy-account-btn" class="btn btn-pay btn-pay--ghost" type="button">
+              계좌 복사
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
