@@ -21,9 +21,9 @@ export const CONFIG = {
   apkUrl:
     "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-release.apk",
   apkFileName: "성경앱.apk",
-  version: "1.0.17",
+  version: "1.0.18",
   siteUrl: "https://banseok-kang1.github.io/bible-download/",
-  apkSizeMb: 130,
+  apkSizeMb: 126,
   helpText: "어려우시면 가족에게 화면을 보여주세요.",
   helpPhone: "",
   installSteps: [
