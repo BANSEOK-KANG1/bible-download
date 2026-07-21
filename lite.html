@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성경 보급형 설치</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="senior-install" data-page="download-lite">
+    <main class="page page--install">
+      <section class="hero hero--compact">
+        <div class="app-icon" aria-hidden="true">성</div>
+        <h1>성경 보급형</h1>
+        <p>용량이 작은 버전 · 구형 폰에 적합</p>
+      </section>
+
+      <div class="wizard-progress" aria-label="설치 진행">
+        <div class="wizard-progress__bar">
+          <div id="progress-fill" class="wizard-progress__fill"></div>
+        </div>
+        <div id="progress-dots" class="wizard-progress__dots"></div>
+        <p id="progress-label" class="wizard-progress__label">1 / 4</p>
+      </div>
+
+      <section id="wizard-step" class="wizard-card" aria-live="polite">
+        <div class="wizard-card__badge" id="step-badge">1</div>
+        <h2 id="step-title" class="wizard-card__title">설치 파일을 받아요</h2>
+        <p id="step-body" class="wizard-card__body">
+          아래 큰 버튼을 한 번만 눌러 주세요.
+        </p>
+        <p id="step-meta" class="wizard-card__meta">
+          약 <span data-config="liteApkSizeMb">35</span>MB · 와이파이 권장
+        </p>
+      </section>
+
+      <div class="wizard-actions">
+        <button id="wizard-primary-btn" class="btn btn-primary btn--large" type="button">
+          받기
+        </button>
+        <div class="wizard-actions__nav">
+          <button id="wizard-prev-btn" class="btn btn-secondary btn--nav" type="button" hidden>
+            이전
+          </button>
+          <button id="wizard-next-btn" class="btn btn-secondary btn--nav" type="button" hidden>
+            다음
+          </button>
+        </div>
+      </div>
+
+      <p class="help-text">
+        개역한글·개역개정·쉬운성경·KJV만 포함합니다. 원어 공부는 일반판을 이용해 주세요.
+      </p>
+      <p class="help-text">
+        <a href="download.html">일반판(모든 번역) 설치로 가기</a>
+      </p>
+    </main>
+
+    <a id="hidden-download" class="visually-hidden" download hidden></a>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

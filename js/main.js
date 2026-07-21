@@ -1,8 +1,10 @@
 import { CONFIG } from "./config.js";
 
 const INSTALL_STEP_KEY = "bible-install-step";
+const LITE_INSTALL_STEP_KEY = "bible-lite-install-step";
 let selectedAmount = CONFIG.defaultDonationAmount;
 let currentInstallStep = 0;
+let isLiteInstall = false;
 
 function applyConfig() {
   document.querySelectorAll("[data-config]").forEach((el) => {
@@ -136,6 +138,10 @@ function goToDownload() {
   window.location.href = "download.html";
 }
 
+function goToLiteDownload() {
+  window.location.href = CONFIG.litePageUrl || "lite.html";
+}
+
 function initEntryPage() {
   applyConfig();
   renderAmountOptions();
@@ -158,6 +164,10 @@ function initEntryPage() {
     .getElementById("donate-done-btn")
     ?.addEventListener("click", goToDownload);
 
+  document
+    .getElementById("lite-install-btn")
+    ?.addEventListener("click", goToLiteDownload);
+
   if (window.location.hash === "#support") {
     openDonationModal();
     window.setTimeout(() => {
@@ -169,7 +179,8 @@ function initEntryPage() {
 }
 
 function getSavedInstallStep() {
-  const saved = Number(localStorage.getItem(INSTALL_STEP_KEY));
+  const key = isLiteInstall ? LITE_INSTALL_STEP_KEY : INSTALL_STEP_KEY;
+  const saved = Number(localStorage.getItem(key));
   const max = CONFIG.installSteps.length - 1;
   if (Number.isInteger(saved) && saved >= 0 && saved <= max) {
     return saved;
@@ -178,7 +189,8 @@ function getSavedInstallStep() {
 }
 
 function saveInstallStep(step) {
-  localStorage.setItem(INSTALL_STEP_KEY, String(step));
+  const key = isLiteInstall ? LITE_INSTALL_STEP_KEY : INSTALL_STEP_KEY;
+  localStorage.setItem(key, String(step));
 }
 
 function renderProgressDots() {
@@ -222,7 +234,13 @@ function updateInstallWizard() {
   if (label) label.textContent = `${currentInstallStep + 1} / ${total}`;
   if (fill) fill.style.width = `${((currentInstallStep + 1) / total) * 100}%`;
   if (primaryBtn) primaryBtn.textContent = step.button;
-  if (meta) meta.hidden = currentInstallStep !== 0;
+  if (meta) {
+    meta.hidden = currentInstallStep !== 0;
+    if (!meta.hidden) {
+      const size = isLiteInstall ? CONFIG.liteApkSizeMb : CONFIG.apkSizeMb;
+      meta.innerHTML = `약 <span>${size}</span>MB · 와이파이 권장`;
+    }
+  }
 
   if (prevBtn) prevBtn.hidden = currentInstallStep === 0;
   if (nextBtn) {
@@ -238,14 +256,16 @@ function updateInstallWizard() {
 
 function triggerApkDownload() {
   const link = document.getElementById("hidden-download");
+  const apkUrl = isLiteInstall ? CONFIG.liteApkUrl : CONFIG.apkUrl;
+  const apkFileName = isLiteInstall ? CONFIG.liteApkFileName : CONFIG.apkFileName;
   if (link) {
-    link.href = CONFIG.apkUrl;
-    link.download = CONFIG.apkFileName;
+    link.href = apkUrl;
+    link.download = apkFileName;
     link.click();
   }
 
   window.setTimeout(() => {
-    window.location.href = CONFIG.apkUrl;
+    window.location.href = apkUrl;
   }, 100);
 }
 
@@ -308,5 +328,9 @@ const page = document.body.dataset.page;
 if (page === "entry") {
   initEntryPage();
 } else if (page === "download") {
+  isLiteInstall = false;
+  initDownloadPage();
+} else if (page === "download-lite") {
+  isLiteInstall = true;
   initDownloadPage();
 }

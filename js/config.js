@@ -24,6 +24,12 @@ export const CONFIG = {
   version: "2.1.12",
   siteUrl: "https://banseok-kang1.github.io/bible-download/",
   apkSizeMb: 151,
+  liteApkUrl:
+    "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-lite-release.apk",
+  liteApkFileName: "성경보급형.apk",
+  liteVersion: "2.1.12-lite",
+  liteApkSizeMb: 28,
+  litePageUrl: "lite.html",
   helpText: "어려우시면 가족에게 화면을 보여주세요.",
   helpPhone: "",
   installSteps: [
