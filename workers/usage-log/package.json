@@ -1,0 +1,16 @@
+{
+  "name": "usage-log",
+  "version": "1.0.0",
+  "description": "앱에서 하루에 한 번 익명 사용 로그를 받는 Cloudflare Worker입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "wrangler": "^3.114.17"
+  }
+}

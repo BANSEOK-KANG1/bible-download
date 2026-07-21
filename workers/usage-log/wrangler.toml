@@ -1,0 +1,8 @@
+name = "bible-usage-log"
+main = "src/index.js"
+compatibility_date = "2024-06-01"
+
+[[kv_namespaces]]
+binding = "USAGE_LOGS"
+id = "f6ea7f0e4c634d99b7dc8d7ea105de01"
+preview_id = "15ec9dca8ca14b7f8e49d5b97dbabd19"
