@@ -168,6 +168,7 @@ https://github.com/USER/REPO/releases/latest/download/app-release.apk
 bible-download/
 ├── index.html          # QR 진입점 (후원 팝업)
 ├── download.html       # 어르신용 4단계 설치 마법사
+├── open-data.html      # 권리 확인 공개본 3종 APK·출처·무결성 정리
 ├── privacy.html        # Google Play 공개 개인정보처리방침
 ├── css/style.css
 ├── js/
