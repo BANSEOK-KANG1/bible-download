@@ -133,7 +133,7 @@ git push -u origin main
 
 ### 3. APK Release 업로드
 
-APK 파일 (~130MB)은 GitHub Releases에 올립니다.
+APK 파일(현재 전체판 약 174MiB)은 GitHub Releases에 올립니다.
 
 ```bash
 # APK 경로 (로컬 빌드 결과)

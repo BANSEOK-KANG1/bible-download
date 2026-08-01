@@ -1,6 +1,6 @@
 export const CONFIG = {
   appName: "성경 앱",
-  appDescription: "검증된 47개 번역본을 함께 읽을 수 있는 성경 앱",
+  appDescription: "기존본을 보존하고 공식 공개본을 더한 59개 번역 성경 앱",
   bankName: "카카오뱅크",
   accountHolder: "강반석",
   accountNumber: "3333-08-396-3527",
@@ -21,9 +21,9 @@ export const CONFIG = {
   apkUrl:
     "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-release.apk",
   apkFileName: "성경앱.apk",
-  version: "2.1.17",
+  version: "2.1.18",
   siteUrl: "https://banseok-kang1.github.io/bible-download/",
-  apkSizeMb: 150,
+  apkSizeMb: 174,
   liteApkUrl:
     "https://github.com/BANSEOK-KANG1/bible-download/releases/download/v2.1.15/app-lite-release.apk",
   liteApkFileName: "성경목회경량.apk",
