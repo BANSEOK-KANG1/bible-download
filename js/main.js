@@ -238,7 +238,8 @@ function updateInstallWizard() {
     meta.hidden = currentInstallStep !== 0;
     if (!meta.hidden) {
       const size = isLiteInstall ? CONFIG.liteApkSizeMb : CONFIG.apkSizeMb;
-      meta.innerHTML = `약 <span>${size}</span>MB · 와이파이 권장`;
+      const version = isLiteInstall ? CONFIG.liteVersion : CONFIG.version;
+      meta.innerHTML = `버전 <span>${version}</span> · 약 <span>${size}</span>MB · 와이파이 권장`;
     }
   }
 
