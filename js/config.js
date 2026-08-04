@@ -21,13 +21,13 @@ export const CONFIG = {
   apkUrl:
     "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-release.apk",
   apkFileName: "성경앱.apk",
-  version: "2.1.18",
+  version: "2.1.19",
   siteUrl: "https://banseok-kang1.github.io/bible-download/",
   apkSizeMb: 174,
   liteApkUrl:
-    "https://github.com/BANSEOK-KANG1/bible-download/releases/download/v2.1.15/app-lite-release.apk",
+    "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-lite-release.apk",
   liteApkFileName: "성경목회경량.apk",
-  liteVersion: "2.1.15-pastor",
+  liteVersion: "2.1.19-pastor",
   liteApkSizeMb: 71,
   litePageUrl: "lite.html",
   helpText: "어려우시면 가족에게 화면을 보여주세요.",
