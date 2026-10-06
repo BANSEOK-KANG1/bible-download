@@ -21,7 +21,7 @@ export const CONFIG = {
   apkUrl:
     "https://github.com/BANSEOK-KANG1/bible-download/releases/latest/download/app-release.apk",
   apkFileName: "성경앱.apk",
-  version: "2.5.8",
+  version: "2.5.9",
   siteUrl: "https://banseok-kang1.github.io/bible-download/",
   apkSizeMb: 235,
   liteApkUrl:
